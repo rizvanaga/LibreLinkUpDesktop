@@ -10,7 +10,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/Crazy-Marvin/LibreLinkUpDesktop/badge.svg?targetFile=app%2Fbuild.gradle)](https://snyk.io/test/github/Crazy-Marvin/LibreLinkUpDesktop?targetFile=package.json)
 [![Electron](https://img.shields.io/badge/-Electron-blue?logo=electron&?labelColor=white&link=https%3A%2F%2Fwww.electronjs.org%2F)](https://www.electronjs.org/)
 [![Microsoft Store](https://img.shields.io/badge/-Microsoft-blue?logo=microsoft&?labelColor=white&link=https%3A%2F%2Fwww.electronjs.org%2F)](https://www.microsoft.com/store/apps/9N5RKKLQM5C9)
-[![Snap](https://img.shields.io/badge/-Snap-orange?logo=snapcraft&?labelColor=white&link=https%3A%2F%2Fwww.electronjs.org%2F)](https://snapcraft.io/librelinkupdesktop/)
+[![Snap](https://snapcraft.io/librelinkupdesktop/badge.svg)](https://snapcraft.io/librelinkupdesktop)
 [![Flathub](https://img.shields.io/badge/-Flathub-blue?logo=flathub&?labelColor=white&link=https%3A%2F%2Fwww.electronjs.org%2F)](https://flathub.org/apps/rocks.poopjournal.librelinkupdesktop)
 
 # LibreLinkUpDesktop
