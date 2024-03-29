@@ -10,7 +10,8 @@ as simple and transparent as possible, whether it's:
 - Proposing new features
 - Becoming a maintainer
 
-Check out the [README](https://github.com/Crazy-Marvin/LibreLinkUpDesktop/blob/trunk/README.md) 
+Check out the
+[README](https://github.com/Crazy-Marvin/LibreLinkUpDesktop/blob/trunk/README.md)
 file for an overview of the project.
 
 ## Any contributions you make will be under the Apache License 2.0
