@@ -279,9 +279,10 @@
     "appx": {
       "backgroundColor": "#000000",
       "displayName": "LibreLinkUpDesktop",
-      "identityName": "LibreLinkUpDesktop",
-      "publisher": "CN=Crazy Marvin and Contributors",
-      "publisherDisplayName": "Crazy Marvin and Contributors",
+      "applicationId": "LibreLinkUpDesktop",
+      "identityName": "6735CrazyMarvin.LibreLinkUpDesktop",
+      "publisher": "CN=67460285-3F8A-4830-A61B-BAB7004F1172",
+      "publisherDisplayName": "Crazy Marvin",
       "artifactName": "${productName}-${version}-${arch}.appx"
     },
     "directories": {
