@@ -2,19 +2,19 @@
 
 Install Node.js 20 on your machine and go to the project root and run following command:
 
-```
+```bash
 npm install
 ```
 
 In order to generate the executables run following command:
 
-```
+```bash
 npm run package
 ```
 
 To generate executables for all platforms run this:
 
-```
+```bash
 npm run package-all
 ```
 
