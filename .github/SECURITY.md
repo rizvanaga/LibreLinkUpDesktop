@@ -1,1 +1,4 @@
-Please report (suspected) security vulnerabilities to marvin@poopjournal.rocks. It would be great if you could prepare a patch too. Thanks!
+# LibreLinkUpDesktop Security
+Please report (suspected) security vulnerabilities to marvin@poopjournal.rocks. 
+It would be great if you could prepare a patch too. 
+Thanks!
