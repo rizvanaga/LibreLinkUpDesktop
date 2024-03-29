@@ -33,7 +33,8 @@ should include those executables:
 - portable
 - pkg
 
-The ```version``` in the ```/release/app/package.json``` needs to be increased following the rules of [Semantic Versioning](https://semver.org/).
+The ```version``` in the ```/release/app/package.json``` needs to be
+increased following the rules of [Semantic Versioning](https://semver.org/).
 
 ## Customizing the application
 
