@@ -24,6 +24,7 @@ As there is no offical API from [Abbott](https://www.freestyle.abbott/) yet, we 
 #### Features of LibreLinkUpDesktop:
 - Show blood glucose level on your desktop in a little window
 - No tracking
+- Dark Mode
 - Libre software
 - That's it. 🩸
 
