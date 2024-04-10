@@ -47,11 +47,11 @@ We officially support three stores:
 
 - **[Flathub](https://flathub.org/apps/rocks.poopjournal.librelinkupdesktop)**
 
-  TBD  
+  [Releasing Guide](./UPDATING-FLATHUB-RELEASE.md)
 
 - **[Snapcraft](https://snapcraft.io/librelinkupdesktop)**
 
-  TBD
+  To release a new update, modify the version string in the `snapcraft.yaml` file (both in the version key and the electron-packager command).
   
 - **[Microsoft Store](https://www.microsoft.com/store/apps/9N5RKKLQM5C9)**
 
