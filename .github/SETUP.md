@@ -51,7 +51,7 @@ We officially support three stores:
 
 - **[Snapcraft](https://snapcraft.io/librelinkupdesktop)**
 
-  To release a new update, modify the version string in the snapcraft.yaml file (both in the version key and the electron-packager command).
+  To release a new update, modify the version string in the `snapcraft.yaml` file (both in the version key and the electron-packager command).
   
 - **[Microsoft Store](https://www.microsoft.com/store/apps/9N5RKKLQM5C9)**
 
