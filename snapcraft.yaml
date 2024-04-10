@@ -1,6 +1,6 @@
 name: librelinkupdesktop
 base: core22
-version: '0.1.8'
+version: '0.1.9'
 summary: LibreLinkUpDesktop
 description: |
   This is a desktop application that fetches your blood sugar from LibreLinkUp.
