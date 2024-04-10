@@ -27,20 +27,21 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://i.postimg.cc/4xvGNMMx/282612446-05b5f05f-bb0a-4146-970b-f6c38997310c.png</image>
+      <image>https://i.postimg.cc/RZLky5PT/Login.png</image>
       <caption>Login</caption>
     </screenshot>
     <screenshot>
-      <image>https://i.postimg.cc/W1sNrT0k/282612642-1cc2f9ec-cdc3-4d65-a6da-da6816d962e7.png</image>
+      <image>https://i.postimg.cc/h4m3NRv7/Main.png</image>
       <caption>Main Screen</caption>
     </screenshot>
     <screenshot>
-      <image>https://i.postimg.cc/RCnZxPMN/282612731-2fbdd728-481f-4a04-a1d1-46adc3901703.png</image>
+      <image>https://i.postimg.cc/RC1LcSqG/Settings.png</image>
       <caption>Settings</caption>
     </screenshot>
   </screenshots>
   <releases>
     <release version="0.1.8" date="2024-04-06"/>
+    <release version="0.1.9" date="2024-04-10"/>
   </releases>
   <content_rating type="oars-1.1"/>
 
