@@ -26,26 +26,29 @@ sudo apt install flatpak-builder
 ## Process
 
 1. **Clone the Repository:**   
-  Clone the Flathub repository from  https://github.com/flathub/rocks.poopjournal.librelinkupdesktop 
+   Clone or fork the Flathub repository from https://github.com/flathub/rocks.poopjournal.librelinkupdesktop.
 
 2. **Update the Manifest:**   
-   Modify the manifest file with the new tag and commit.
+   Modify the manifest file with the new tag and commit the changes.
 
-3. **Build and Install:**   
-   Execute `flatpak-builder --user --install --force-clean build rocks.poopjournal.librelinkupdesktop.yml` to build and install the application.
+3. **Generate Generated Sources:**   
+   To build locally, you may copy the generated sources from https://github.com/Crazy-Marvin/LibreLinkUpDesktop or regenerate a new file as described in the "Updating Node Modules" section.
 
-4. **Run the Application:**   
-   Launch the application using `flatpak run rocks.poopjournal.librelinkupdesktop`.
+4. **Build and Install:**   
+   Execute the command `flatpak-builder --user --install --force-clean build rocks.poopjournal.librelinkupdesktop.yml` to build and install the application.
 
-5. **Finalize the Update:**   
-   If the application runs successfully, commit and push the changes to the repository for the new release.
+5. **Run the Application:**   
+   Launch the application using the command `flatpak run rocks.poopjournal.librelinkupdesktop`.
+
+6. **Finalize the Update:**   
+   If the application runs successfully, commit and push the changes (`generated-sources.json` and `rocks.poopjournal.librelinkupdesktop.yml` files) to the repository. Then, create a pull request to the master branch for the new release.
 
 ## Updating Node Modules
 
-If the node modules have been updated, follow these steps to update `generated-sources.json`.
+If the node modules have been updated, follow these steps to update the `generated-sources.json` file.
 
 ### Prerequisites
-- python 3.8
+- Python 3.8
 - pipx
 - flatpak-node-generator
 
@@ -68,5 +71,10 @@ If the node modules have been updated, follow these steps to update `generated-s
 3. **Generate Sources:**   
    Run `flatpak-node-generator npm package-lock.json` to generate the new sources.
 
-4. **Update the Flathub Repository:**   
-   Copy the updated `generated-sources.json` file to the Flathub repository.
+4. **Test the Build Locally:**   
+   Follow the guide above to test the build locally.
+
+5. **Update the Repository:**   
+   Commit the updated `generated-sources.json` file to the LibreLinkUpDesktop repository.
+
+   Note: Ensure the `generated-sources.json` file is present in both the Flathub repository and the upstream repository.
