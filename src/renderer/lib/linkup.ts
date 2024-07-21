@@ -45,7 +45,7 @@ export async function getAuthToken(request: LoginAttemptRequest): Promise<string
   return null
 }
 
-export async function getGraphData(request: GetGeneralRequest): Promise<string|null> {
+export async function getCGMData(request: GetGeneralRequest): Promise<string|null> {
   try {
     const baseURL = getBaseUrl(request.country)
     const headers = {
@@ -81,7 +81,7 @@ export async function getGraphData(request: GetGeneralRequest): Promise<string|n
 
     console.log(graphResponse?.data?.data)
 
-    return graphResponse?.data?.data?.connection?.glucoseMeasurement
+    return graphResponse?.data?.data?.connection
   } catch (error) {
     console.log("Unable to get the token: ", error)
   }

@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
 import { BaseLayout } from "@/layouts/base-layout"
 import { useAuthStore } from "@/stores/auth"
-import { getGraphData } from "@/lib/linkup"
+import { getCGMData } from "@/lib/linkup"
 import { TrendArrow } from "@/components/ui/trend-arrow"
 import { GearIcon } from "@radix-ui/react-icons"
 import { useNavigate } from "react-router-dom"
 import { LoadingScreen } from "@/components/ui/loading"
 import { useClearSession } from "@/hooks/session"
 import { openNewWindow, setRedirectTo } from "@/lib/utils"
+
+const LOW = 70;
+const HIGH = 240;
 
 export default function DashboardPage() {
   const { clearSession } = useClearSession()
@@ -18,7 +21,7 @@ export default function DashboardPage() {
   const [isReady, setIsReady] = useState(false)
 
   const populateGraphData = async () => {
-    const data = await getGraphData({
+    const data = await getCGMData({
       token: token ?? "",
       country: country ?? "",
     })
@@ -32,12 +35,20 @@ export default function DashboardPage() {
     setIsReady(true)
   }
 
-  const getColor = (value: number): string => {
-    if (value > 70 && value < 180) {
-      return "bg-green-500"
+  const getColor = (value: number, targetLow: number, targetHigh: number): string => {
+    if (value < LOW) {
+      return "bg-red-500"
     }
 
-    return "bg-yellow-500"
+    if (value > HIGH) {
+      return "bg-orange-500"
+    }
+
+    if ((value < targetLow && value >= LOW) || (value > targetHigh && value <= HIGH)) {
+      return "bg-yellow-500"
+    }
+
+    return "bg-green-500"
   }
 
   useEffect(() => {
@@ -61,7 +72,11 @@ export default function DashboardPage() {
 
   return (
     <BaseLayout
-      className={`${getColor(graphData?.ValueInMgPerDl ?? 1)} flex justify-center items-center`}
+      className={`${getColor(
+        graphData?.glucoseMeasurement?.ValueInMgPerDl ?? 1,
+        graphData?.targetLow ?? 1,
+        graphData?.targetHigh ?? 1
+      )} flex justify-center items-center`}
     >
       <button
         onClick={() => openSettings('/settings/general')}
@@ -70,9 +85,9 @@ export default function DashboardPage() {
         <GearIcon className="text-white h-6 w-6" />
       </button>
       <div className="flex items-center gap-3">
-        <p className="text-white text-3xl font-semibold">{graphData?.ValueInMgPerDl} mg/dL</p>
+        <p className="text-white text-3xl font-semibold">{graphData?.glucoseMeasurement?.ValueInMgPerDl} mg/dL</p>
         <div className="flex justify-center items-center h-12 w-12 rounded-full bg-white/25">
-          <TrendArrow className="h-9 w-9 text-white" trend={graphData?.TrendArrow ?? 1} />
+          <TrendArrow className="h-9 w-9 text-white" trend={graphData?.glucoseMeasurement?.TrendArrow ?? 1} />
         </div>
       </div>
     </BaseLayout>
