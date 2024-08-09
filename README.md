@@ -42,7 +42,7 @@ As there is no offical API from [Abbott](https://www.freestyle.abbott/) yet, we 
 
 Login | Main Screen | Settings
 ------------ | ------------- | -------------
-![LibreLinkUpDesktop Login Screen](https://github.com/Crazy-Marvin/LibreLinkUpDesktop/assets/15004217/cce4e8f4-cba0-45fd-bd08-e224fbe7764f) | ![LibreLinkUpDesktop Main Screen](https://github.com/Crazy-Marvin/LibreLinkUpDesktop/assets/15004217/1cc2f9ec-cdc3-4d65-a6da-da6816d962e7) | ![LibreLinkUpDesktop Settings Screen](https://github.com/Crazy-Marvin/LibreLinkUpDesktop/assets/15004217/9b2b9413-51f6-41f3-ae9c-71db90a3ddfd)
+![LibreLinkUpDesktop Login Screen](https://github.com/user-attachments/assets/95ee1407-acfa-40bf-bc11-9babc1e2243c) | ![LibreLinkUpDesktop Main Screen](https://github.com/user-attachments/assets/4cc57b56-a282-4341-87ec-436569056b92) | ![LibreLinkUpDesktop Settings Screen](https://github.com/user-attachments/assets/d8b30325-7083-4a48-a1c7-1e6d072a8395)
 
 # Contributing
 
