@@ -11,9 +11,9 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { useAuthStore } from "@/stores/auth"
-import { countries, languages, themes } from "@/config/app"
+import { countries, languages, themes, resultUnits } from "@/config/app"
 import { useTranslation } from "react-i18next"
-import { setRedirectTo } from "@/lib/utils"
+import { setRedirectTo, sendRefreshPrimaryWindow } from "@/lib/utils"
 
 export default function SettingsGeneralPage() {
   const navigate = useNavigate()
@@ -23,6 +23,9 @@ export default function SettingsGeneralPage() {
   const setLanguage = useAuthStore((state) => state.setLanguage)
   const country = useAuthStore((state) => state.country)
   const setCountry = useAuthStore((state) => state.setCountry)
+
+  const resultUnit = useAuthStore((state) => state.resultUnit)
+  const setResultUnit = useAuthStore((state) => state.setResultUnit)
 
   const { setTheme } = useTheme()
   const setAndRefreshTheme = (t: ThemeType) => {
@@ -35,11 +38,16 @@ export default function SettingsGeneralPage() {
     setLanguage(l)
   }
 
+  const handleSetResultUnit = (value) => {
+    setResultUnit(value);
+    sendRefreshPrimaryWindow();
+  }
+
   return (
     <SettingsLayout>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="text-foreground/30 text-xs mb-2">Theme</p>
+          <p className="text-foreground/30 text-xs mb-2">{t('Theme')}</p>
           <Select onValueChange={setAndRefreshTheme} defaultValue={theme ?? ''}>
             <SelectTrigger>
               <SelectValue placeholder="Select Theme" />
@@ -52,32 +60,24 @@ export default function SettingsGeneralPage() {
               ))}
             </SelectContent>
           </Select>
-          {/* <div className="border rounded-md">
-            <Button
-              className={cn(theme === 'dark' ? 'bg-primary/10 border border-primary' : '')}
-              variant="ghost"
-              onClick={() => setAndRefreshTheme('dark')}
-            >
-              {t('Dark')}
-            </Button>
-            <Button
-              className={cn(theme === 'light' ? 'bg-primary/10 border border-primary' : '')}
-              variant="ghost"
-              onClick={() => setAndRefreshTheme('light')}
-            >
-              {t('Light')}
-            </Button>
-            <Button
-              className={cn(theme === 'system' ? 'bg-primary/10 border border-primary' : '')}
-              variant="ghost"
-              onClick={() => setAndRefreshTheme('system')}
-            >
-              {t('System')}
-            </Button>
-          </div> */}
         </div>
         <div>
-          <p className="text-foreground/30 text-xs mb-2">Country</p>
+          <p className="text-foreground/30 text-xs mb-2">{t('Unit')}</p>
+          <Select onValueChange={handleSetResultUnit} defaultValue={resultUnit ?? 'mg/dL'}>
+            <SelectTrigger>
+              <SelectValue placeholder="Select Unit" />
+            </SelectTrigger>
+            <SelectContent>
+              {resultUnits.map(item => (
+                <SelectItem value={item.value} key={item.value}>
+                  {t(item.label)}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+        <div>
+          <p className="text-foreground/30 text-xs mb-2">{t('Country')}</p>
           <Select onValueChange={setCountry} defaultValue={country ?? ''}>
             <SelectTrigger>
               <SelectValue placeholder="Select Country" />
@@ -92,7 +92,7 @@ export default function SettingsGeneralPage() {
           </Select>
         </div>
         <div>
-          <p className="text-foreground/30 text-xs mb-2">Language</p>
+          <p className="text-foreground/30 text-xs mb-2">{t('Language')}</p>
           <Select onValueChange={setAndRefreshLanguage} defaultValue={language ?? ''}>
             <SelectTrigger>
               <SelectValue placeholder="Select Language" />
