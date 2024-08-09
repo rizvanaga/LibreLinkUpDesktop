@@ -38,8 +38,20 @@ const themes: DropdownConfigType[] = [
   },
 ];
 
+const resultUnits: DropdownConfigType[] = [
+  {
+    label: 'mg/dL',
+    value: 'mg/dL',
+  },
+  {
+    label: 'mmol/L',
+    value: 'mmol/L',
+  },
+];
+
 export {
   countries,
   languages,
   themes,
+  resultUnits,
 }
