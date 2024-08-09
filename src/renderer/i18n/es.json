@@ -34,5 +34,7 @@
     "First Name": "Nombre",
     "Dark": "Oscuro",
     "Last Name": "Apellido/s",
-    "System": "Sistema"
+    "System": "Sistema",
+    "Unit": "Unidad",
+    "Theme": "Tema"
 }
