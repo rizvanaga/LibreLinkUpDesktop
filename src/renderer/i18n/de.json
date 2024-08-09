@@ -34,5 +34,7 @@
     "Country": "Land",
     "Language": "Sprache",
     "SelectLanguage": "Sprache wählen",
-    "getCredentialsStep1": "Öffnen Sie als teilende Person Ihre <1>Libre Smartphone-App</1>, gehen Sie zu <3>Verbundene Apps</3>, klicken Sie auf <5>Verwalten</5> neben LibreLinkUp, klicken Sie auf <7>Verbindung hinzufügen</7> und geben Sie die Details für das Konto ein, das Sie mit LibreLinkUpDesktop verwenden möchten."
+    "getCredentialsStep1": "Öffnen Sie als teilende Person Ihre <1>Libre Smartphone-App</1>, gehen Sie zu <3>Verbundene Apps</3>, klicken Sie auf <5>Verwalten</5> neben LibreLinkUp, klicken Sie auf <7>Verbindung hinzufügen</7> und geben Sie die Details für das Konto ein, das Sie mit LibreLinkUpDesktop verwenden möchten.",
+    "Theme": "Aussehen",
+    "Unit": "Einheit"
 }
