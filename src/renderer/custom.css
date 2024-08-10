@@ -6,9 +6,10 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
+    -webkit-app-region: drag;
   }
 
   ::-webkit-scrollbar {
