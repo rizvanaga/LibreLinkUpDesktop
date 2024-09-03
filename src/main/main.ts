@@ -18,6 +18,7 @@ import { registerRefreshHandler, destroyRefreshHandler } from "./refreshHandler"
 // }
 
 let mainWindow: BrowserWindow | null = null
+let miniWindow: BrowserWindow | null = null
 
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support')
@@ -60,12 +61,8 @@ const createWindow = async () => {
   mainWindow = new BrowserWindow({
     show: false,
     width: 1024,
-    minWidth: 175,
-    minHeight: 50,
     height: 728,
     icon: getAssetPath('icon.png'),
-    frame: false,
-    alwaysOnTop: true,
     webPreferences: {
       webSecurity: false,
       preload: app.isPackaged

@@ -9,7 +9,6 @@
 
   body {
     @apply bg-background text-foreground;
-    -webkit-app-region: drag;
   }
 
   ::-webkit-scrollbar {
@@ -27,5 +26,15 @@
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-foreground/60;
+  }
+}
+
+@layer dashboard {
+  * {
+  -webkit-app-region: drag;
+  }
+
+  button {
+    -webkit-app-region: no-drag;
   }
 }

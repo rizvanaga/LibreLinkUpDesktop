@@ -10,7 +10,7 @@ export const registerWindowHandlers = () => {
   const windowCache: WindowCache = {};
 
   // 👉 register window handlers
-  ipcMain.on('open-new-window', (event, url, width, height, alwaysOnTop) => {
+  ipcMain.on('open-new-window', (event, url, width, height, alwaysOnTop, frame, minWidth, minHeight) => {
     // Check if the window for this URL already exists
     if (windowCache[url]) {
       // Focus the existing window if it exists
@@ -22,8 +22,11 @@ export const registerWindowHandlers = () => {
 
     const newWindow = new BrowserWindow({
       width,
+      minWidth: 200,
       height,
-      alwaysOnTop,
+      minHeight: 50,
+      alwaysOnTop: true,
+      frame: false,
       webPreferences: {
         webSecurity: false,
         preload: app.isPackaged

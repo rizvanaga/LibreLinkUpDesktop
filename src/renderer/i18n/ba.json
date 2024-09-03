@@ -1,0 +1,47 @@
+{
+  "Welcome": "Ovo je desktop aplikacija koja dohvaća Vaše vrijednosti šećera u krvi uz pomoć LibreLinkUp",
+  "Settings": "Postavke",
+  "General": "Općenito",
+  "Account": "Račun",
+
+  "First Name": "Ime",
+  "Last Name": "Prezime",
+
+  "System": "Sistem",
+  "Dark": "Tamno",
+  "Light": "Svijetlo",
+
+  "German": "Njemački",
+  "English": "Engleski",
+  "Sinhala": "Sinhalski",
+  "Norwegian": "Norveški",
+
+  "Germany": "Njemačka",
+  "European Union": "Evropska Unija",
+  "European Union 2": "Evropska Unija 2",
+  "United States": "Sjedinjene Američke Države",
+  "Asia/Pacific": "Azija/Tihi okean",
+  "Canada": "Kanada",
+  "Japan": "Japan",
+  "United Arab Emirates": "Ujedinjeni Arapski Emirati",
+  "France": "Francuska",
+  "Australia": "Australija",
+
+  "getCredentialsTitle": "Kako dobiti credentials",
+  "getCredentialsStep1": "As sharing person, open your <1>Libre smartphone app</1>, go to <3>Connected Apps</3>, click on <5>Manage</5> next to LibreLinkUp, click on <7>Add connection</7> and input the details for the account you wish to use with LibreLinkUpDesktop.",
+  "getCredentialsStep1Link": "https://play.google.com/store/apps/details?id=com.freestylelibre3.app.de",
+
+  "getCredentialsStep2": "Sačuvajte credentials u Vaš upravitelj lozinkama. Možete ih koristiti za sebe ili ih možete podijeliti sa drugima.",
+  "getCredentialsStep3": "Unesite credentials na ovu login stranicu.",
+  "getCredentialsStep4": "To je to. 😄",
+
+  "Username": "Korisničko ime",
+  "Password": "Lozinka",
+  "Login": "Uloguj se",
+  "Country": "Država",
+  "Language": "Jezik",
+  "SelectCountry": "Odaberi državu",
+  "SelectLanguage": "Odaberi jezik",
+  "Theme": "Tema",
+  "Unit": "Mjerna jedinica"
+}

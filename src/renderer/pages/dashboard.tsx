@@ -3,7 +3,7 @@ import { BaseLayout } from "@/layouts/base-layout"
 import { useAuthStore } from "@/stores/auth"
 import { getCGMData } from "@/lib/linkup"
 import { TrendArrow } from "@/components/ui/trend-arrow"
-import { GearIcon } from "@radix-ui/react-icons"
+import { GearIcon, OpenInNewWindowIcon } from "@radix-ui/react-icons"
 import { useNavigate } from "react-router-dom"
 import { LoadingScreen } from "@/components/ui/loading"
 import { useClearSession } from "@/hooks/session"
@@ -66,6 +66,11 @@ export default function DashboardPage() {
     openNewWindow(path, 1024, 768)
   }
 
+  const openMinimizedNewWindow = (path: string) => {
+    setRedirectTo(path);
+    openNewWindow(path, 200, 50)
+  }
+
   if (!isReady) {
     return <LoadingScreen />
   }
@@ -83,6 +88,12 @@ export default function DashboardPage() {
         className="absolute right-1 items-center p-1 hover:bg-white/20 rounded-md transition-all"
       >
         <GearIcon className="text-white h-5 w-5" />
+      </button>
+      <button
+      onClick={() => openMinimizedNewWindow('/dashboard')}
+      className="absolute right-10 items-center p-1 hover:bg-white/20 rounded-md transition-all"
+      >
+        <OpenInNewWindowIcon className="text-white h-5 w-5" />
       </button>
       <div className="flex items-center gap-3">
         <p className="text-white text-1xl font-semibold">{getUserValue(graphData?.glucoseMeasurement?.ValueInMgPerDl) + ' ' + getUserUnit() }</p>

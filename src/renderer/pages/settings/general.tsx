@@ -27,6 +27,8 @@ export default function SettingsGeneralPage() {
   const resultUnit = useAuthStore((state) => state.resultUnit)
   const setResultUnit = useAuthStore((state) => state.setResultUnit)
 
+
+
   const { setTheme } = useTheme()
   const setAndRefreshTheme = (t: ThemeType) => {
     setTheme(t)

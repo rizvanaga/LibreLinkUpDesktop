@@ -4,6 +4,7 @@ import en from "./en.json"
 import si from "./si.json"
 import no from "./no.json"
 import de from "./de.json"
+import ba from "./ba.json"
 
 i18next.use(initReactI18next).init({
   // lng: 'en', // if you're using a language detector, do not define the lng option
@@ -21,6 +22,9 @@ i18next.use(initReactI18next).init({
     },
     de: {
       translation: de,
+    },
+    ba: {
+      translation: ba,
     },
   },
 })
